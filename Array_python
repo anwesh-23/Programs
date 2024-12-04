@@ -1,0 +1,22 @@
+ Task 1: Create an array of integers and find its length
+arr = [10, 20, 30, 40, 50]
+print("Array:", arr)
+print("Length of the array:", len(arr))
+
+# Task 2: Access elements of an array using indexing
+print("First element:", arr[0])
+print("Last element:", arr[-1])
+
+# Task 3: Find the maximum and minimum elements in an array
+print("Maximum element:", max(arr))
+print("Minimum element:", min(arr))
+
+# Task 4: Append a new element to the array
+new_element = 60
+arr.append(new_element)
+print("Array after appending:", arr)
+
+# Task 5: Concatenate two arrays
+arr2 = [70, 80, 90]
+concatenated_array = arr + arr2
+print("Concatenated array:", concatenated_array)
