@@ -1,0 +1,36 @@
+import pandas as pd
+
+# Task 1: Create a DataFrame from a dictionary and display its contents
+data = {
+    "Name": ["Alice", "Bob", "Charlie"],
+    "Age": [24, 27, 22],
+    "Salary": [50000, 60000, 55000]
+}
+df = pd.DataFrame(data)
+print("DataFrame from dictionary:")
+print(df)
+
+# Task 2: Create a DataFrame and calculate the sum of each column
+column_sums = df.sum(numeric_only=True)
+print("\nSum of each column:")
+print(column_sums)
+
+# Task 3: Create a DataFrame with Name, Age, Salary and sort it by Salary in descending order
+sorted_df = df.sort_values(by="Salary", ascending=False)
+print("\nDataFrame sorted by Salary (descending):")
+print(sorted_df)
+
+# Task 4: Merge two DataFrames on a common column
+data2 = {
+    "Name": ["Alice", "Bob", "David"],
+    "Department": ["HR", "Finance", "IT"]
+}
+df2 = pd.DataFrame(data2)
+merged_df = pd.merge(df, df2, on="Name", how="inner")
+print("\nMerged DataFrame:")
+print(merged_df)
+
+# Task 5: Select rows where the Age is greater than 25
+filtered_df = df[df["Age"] > 25]
+print("\nRows where Age is greater than 25:")
+print(filtered_df)
